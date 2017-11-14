@@ -1,0 +1,45 @@
+//  Copyright (c) 2012-2013, Jungwacht Blauring Schweiz. This file is part of
+//  hitobito and licensed under the Affero General Public License version 3
+//  or later. See the COPYING file at the top-level directory or at
+//  https://github.com/hitobito/hitobito.
+
+// one wagon may override this file in order to customize styles
+
+.brand {
+  display: block;
+  float: left;
+  width: 219px;
+  height: 76px;
+  padding: 0px 0;
+  margin-right: 40px;
+
+  // Hide text
+  text-indent: -9999px;
+  white-space: nowrap;
+  font-family: $headingFontFamily;
+  font-weight: bold;
+  font-size: 2.462em; // 32px
+  line-height: 1.250em; // 40px
+  @include single-text-shadow(white, 0, 1px, 0);
+
+  background: image-url("sbv.png") transparent no-repeat 0px 0px;
+  background-size: contain;
+
+  // Retina version
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2) {
+    background-size: 219px 72px;
+  }
+
+}
+
+#page-navigation {
+  .nav li a {
+    color: black;
+  }
+}
+
+#page-header {
+  padding: 10px 20px 10px;
+  border-bottom: 10px solid $blue;
+}

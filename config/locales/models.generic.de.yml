@@ -11,8 +11,8 @@ de:
         one: "Region/Kanton"
         other: "Regionen/Kantone"
       group/local:
-        one: "Lokalgruppe/Sektion"
-        other: "Lokalgruppen/Sektionen"
+        one: "Musikgesellschaft"
+        other: "Musikgestellschaften"
       group/board:
         one: Vorstand
         other: Vorstände

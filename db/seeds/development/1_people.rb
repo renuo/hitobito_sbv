@@ -17,6 +17,18 @@ class GenericPersonSeeder < PersonSeeder
     end
   end
 
+  def person_attributes(role_type)
+    attrs = standard_attributes(Faker::Name.first_name,
+                                Faker::Name.last_name)
+
+    if role_type.kind == :external
+      attrs[:company] = true
+      attrs[:company_name] = Faker::Company.name
+    end
+
+    attrs
+  end
+
   def seed_demo_person(email, group, role_type)
     attrs = person_attributes(role_type).merge(email: email)
     p = Person.seed(:email, attrs).first

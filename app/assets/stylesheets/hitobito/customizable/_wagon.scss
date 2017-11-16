@@ -42,8 +42,11 @@
 #page-header {
   padding: 10px 20px 10px;
   border-bottom: 10px solid $blue;
-  
+
   .options > ul > li > a { // header links on the right side
     color: lighten(black, 35%);
+    &:hover {
+      color: black;
+    }
   }
 }

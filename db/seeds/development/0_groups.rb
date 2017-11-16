@@ -22,28 +22,28 @@ unless ch.address.present?
 end
 
 states = Group::Region.seed(:name, :parent_id,
-  {name: 'Region Bern',
+  {name: 'Bernischer Kantonal-Musikverband',
    address: "Klostergasse 3",
    zip_code: "3333",
    town: "Bern",
-   country: "Svizzera",
-   email: "bern@be.ch",
+   country: "Schweiz",
+   email: "kontakt@bkmv.ch",
    parent_id: ch.id},
 
-  {name: 'Region Zürich',
+  {name: 'Zürcher Blasmusikverband',
    address: "Tellgasse 3",
-   zip_code: "8888",
+   zip_code: "8000",
    town: "Zürich",
-   country: "Svizzera",
-   email: "zuerich@zh.ch",
+   country: "Schweiz",
+   email: "	sekretariat@zhbv.ch",
    parent_id: ch.id },
 
-  {name: 'Region Nordost',
-   address: "Nordostgasse 3",
-   zip_code: "9000",
-   town: "Nordosthausen",
-   country: "Svizzera",
-   email: "nordost@nordost.ch",
+  {name: 'Zuger Blasmusikverband',
+   address: "Sonnenweg 32",
+   zip_code: "6340",
+   town: "Baar ZG",
+   country: "Schweiz",
+   email: "info@zuger-blasmusikverband.ch",
    parent_id: ch.id }
 )
 
@@ -53,52 +53,67 @@ states.each do |s|
   board.update_attributes(seeder.group_attributes)
 end
 
-
+regions = Group::Region.seed(:name, :parent_id,
+                            {name: 'Musikverband Zürcher Unterland',
+                             address: "Klostergasse 3",
+                             zip_code: "8000",
+                             town: "Zürich",
+                             country: "Svizzera",
+                             email: "zu@zh.ch",
+                             parent_id: Group.find_by_name("Zürcher Blasmusikverband").id},
+                           {name: 'Musikverband Amt + Limmattal',
+                             address: "Klostergasse 3",
+                             zip_code: "8000",
+                             town: "Zürich",
+                             country: "Svizzera",
+                             email: "zu@zh.ch",
+                             parent_id: Group.find_by_name("Zürcher Blasmusikverband").id}
+)
+regions.each do |s|
+  seeder.seed_social_accounts(s)
+  board = s.children.where(type: 'Group::RegionBoard').first
+  board.update_attributes(seeder.group_attributes)
+end
 
 clubs = Group::Local.seed(:name, :parent_id,
 seeder.group_attributes.merge(
-  {name: 'Verein Bern Stadt',
-   short_name: 'Bern Stadt',
+  {name: 'Musikgesellschaft Köniz-Wabern',
+   short_name: 'Musikgesellschaft Köniz-Wabern',
    parent_id: states[0].id }),
 
 seeder.group_attributes.merge(
-  {name: 'Verein Konolfingen',
-   short_name: 'Konolfingen',
+  {name: 'Metallharmonie Bern',
+   short_name: 'Metallharmonie Bern',
    parent_id: states[0].id }),
 
 seeder.group_attributes.merge(
-  {name: 'Verein Biel',
-   short_name: 'Biel',
+  {name: 'Musikgesellschaft Bern-Bümpliz',
+   short_name: 'Musikgesellschaft Bern-Bümpliz',
    parent_id: states[0].id }),
 
 seeder.group_attributes.merge(
-  {name: 'Verein Düdingen',
-   short_name: 'Düdingen',
-   parent_id: states[0].id }),
+  {name: 'Musikverband Zürcher Unterland',
+   short_name: 'Musikverband Zürcher Unterland',
+   parent_id: regions[0].id }),
 
 seeder.group_attributes.merge(
-  {name: 'Verein Kerzers',
-   short_name: 'Kerzers',
-   parent_id: states[0].id }),
+  {name: 'Jugendmusik Bezirk Affoltern',
+   short_name: 'Jugendmusik Bezirk Affoltern',
+   parent_id: regions[1].id }),
 
 seeder.group_attributes.merge(
-  {name: 'Verein Züri Stadt',
-   short_name: 'Züri',
-   parent_id: states[1].id }),
+  {name: 'Musikverein Bassersdorf',
+   short_name: 'Musikverein Bassersdorf',
+   parent_id: regions[0].id }),
 
 seeder.group_attributes.merge(
-  {name: 'Verein Seebach',
-   short_name: 'Seebach',
-   parent_id: states[1].id }),
+  {name: 'Jugendmusik Embrach',
+   short_name: 'Jugendmusik Embrach',
+   parent_id: regions[0].id }),
 
 seeder.group_attributes.merge(
-  {name: 'Verein ZH Oberland',
-   short_name: 'Oberland',
-   parent_id: states[1].id }),
-
-seeder.group_attributes.merge(
-  {name: 'Verein Solothurn',
-   short_name: 'Solothurn',
+  {name: 'Feldmusik Baar',
+   short_name: 'Baar',
    parent_id: states[2].id })
 )
 

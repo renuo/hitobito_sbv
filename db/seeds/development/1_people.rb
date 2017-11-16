@@ -60,8 +60,8 @@ devs.each do |name, email|
   seeder.seed_developer(name, email, root, Group::TopLayer::Administrator)
 end
 
-gs = Group.find_by_name('Region Bern').children.where(type: Group::RegionBoard.sti_name).first
+gs = Group.find_by_name('Bernischer Kantonal-Musikverband').children.where(type: Group::RegionBoard.sti_name).first
 seeder.encrypted_password = BCrypt::Password.create("demo", cost: 1)
-seeder.seed_demo_person('admin@hitobito.ch', root, Group::TopLayer::Administrator)
-seeder.seed_demo_person('leitung@hitobito.ch', gs, Group::RegionBoard::President)
-seeder.seed_demo_person('mitglied@hitobito.ch', Group.find_by_name('Verein Bern Stadt'), Group::Local::ActiveMember)
+seeder.seed_demo_person('admin@sbv.ch', root, Group::TopLayer::Administrator)
+seeder.seed_demo_person('leitung@sbv.ch', gs, Group::RegionBoard::President)
+seeder.seed_demo_person('mitglied@sbv.ch', Group.find_by_name('Musikgesellschaft Köniz-Wabern'), Group::Local::ActiveMember)

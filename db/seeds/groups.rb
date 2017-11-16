@@ -6,6 +6,10 @@
 #  https://github.com/hitobito/hitobito_generic.
 
 Group::TopLayer.seed_once(:parent_id,
-  {name: 'Dachverband',
-   short_name: 'Dachverband'}
+  {name: 'SCHWEIZER BLASMUSIKVERBAND',
+   short_name: 'SBV',
+   email: "info@windband.ch",
+   address: "Gönhardweg 32",
+   zip_code: "5001",
+   town: "Aarau"}
 )

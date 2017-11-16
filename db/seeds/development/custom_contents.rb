@@ -21,9 +21,9 @@ CustomContent::Translation.seed(:custom_content_id, :locale,
    body: "<h2>Demo Version</h2>\
 <p>Du kannst dich mit den folgenden E-Mail-Adressen anmelden:</p>\
 <ul>\
-  <li>admin@hitobito.ch (Passwort: demo) - Administrator mit vollem Zugriff</li>\
-  <li>leitung@hitobito.ch (Passwort: demo) - Rolle Leitung einer lokalen Gruppe</li>\
-  <li> mitglied@hitobito.ch (Passwort: demo) - Einfaches Gruppenmitglied</li>\
+  <li>admin@sbv.ch (Passwort: demo) - Administrator mit vollem Zugriff</li>\
+  <li>leitung@sbv.ch (Passwort: demo) - Rolle Leitung einer lokalen Gruppe</li>\
+  <li> mitglied@sbv.ch (Passwort: demo) - Einfaches Gruppenmitglied</li>\
 </ul\>
 <br/>\
 <p>\
@@ -38,9 +38,9 @@ CustomContent::Translation.seed(:custom_content_id, :locale,
    body: "<h2>Version Démo</h2>\
 <p>Tu peux t'inscrire avec les adresses e-mail suivantes:</p>\
 <ul>\
-  <li>admin@hitobito.ch (mot de passe: demo) - administrateur avec access complet</li>\
-  <li>leitung@hitobito.ch (mot de passe: demo) - rôle responsable d'une groupe locale</li>\
-  <li> mitglied@hitobito.ch (mot de passe: demo) - membre d'une groupe</li>\
+  <li>admin@sbv.ch (mot de passe: demo) - administrateur avec access complet</li>\
+  <li>leitung@sbv.ch (mot de passe: demo) - rôle responsable d'une groupe locale</li>\
+  <li> mitglied@sbv.ch (mot de passe: demo) - membre d'une groupe</li>\
 </ul\>
 <br/>\
 <p>\
@@ -55,9 +55,9 @@ CustomContent::Translation.seed(:custom_content_id, :locale,
    body: "<h2>Demo Version</h2>\
 <p>You may login with the following email addresses:</p>\
 <ul>\
-  <li>admin@hitobito.ch (password: demo) - administrator with full access</li>\
-  <li>leitung@hitobito.ch (password: demo) - leader of a local group</li>\
-  <li> mitglied@hitobito.ch (password: demo) - simple group member</li>\
+  <li>admin@sbv.ch (password: demo) - administrator with full access</li>\
+  <li>leitung@sbv.ch (password: demo) - leader of a local group</li>\
+  <li> mitglied@sbv.ch (password: demo) - simple group member</li>\
 </ul\>
 <br/>\
 <p>\

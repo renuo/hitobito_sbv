@@ -29,7 +29,7 @@ de:
         one: "Gremium/Projektgruppe"
         other: "Gremien/Projektgruppen"
       group/top_layer/administrator: Administrator
-      group/local/main_leader: Hauptleitung
+      group/local/main_leader: Präsident/in
       group/local/address_manager: Adressverwaltung
 
 
@@ -40,7 +40,7 @@ de:
       role/passive_member: Passivmitglied
       role/office_manager: Leitung
       role/office_staff: Mitglied
-      role/leader: Leitung
+      role/leader: Dirigent
       role/board_president: Präsident
       role/board_vice_president: Vizepräsident
       role/board_secretary: Sekretär(in)

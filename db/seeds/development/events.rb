@@ -22,7 +22,7 @@ seeder = EventSeeder.new
 
 MailingList.create(
   { name: 'Unisono',
-    group: Group.find(5),
+    group: Group.find(1),
     description: 'Unsere Mitgliederzeitschrift',
     publisher: 'SBV'
   }
@@ -30,7 +30,7 @@ MailingList.create(
 
 b = MailingList.create(
   { name: 'SBV-Newsletter',
-    group: Group.find(5),
+    group: Group.find(1),
     description: 'Unser Newsletter',
     publisher: 'SBV',
     mail_name: 'newsletter'

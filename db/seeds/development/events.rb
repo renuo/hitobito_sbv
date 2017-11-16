@@ -18,4 +18,32 @@ seeder = EventSeeder.new
 #   end
 # end
 
+# Abos
+
+MailingList.create(
+  { name: 'Unisono',
+    group: Group.find(5),
+    description: 'Unsere Mitgliederzeitschrift',
+    publisher: 'SBV'
+  }
+)
+
+b = MailingList.create(
+  { name: 'SBV-Newsletter',
+    group: Group.find(5),
+    description: 'Unser Newsletter',
+    publisher: 'SBV',
+    mail_name: 'newsletter'
+  }
+)
+b.update!(subscriptions: [17, 33].map {|d| Subscription.new({ subscriber: Person.find(d) })})
+
+# Mitgliedschaften
+Person.find(16).update!(birthday: Date.new(1930, 3, 1))
+Person.find(16).roles.push(Role.new({group: Group.find(26), created_at: Time.new(1940,3,1), type: 'Group::Local::Leader', deleted_at: Time.new(1950, 3,1)}))
+Person.find(16).roles.push(Role.new({group: Group.find(26), created_at: Time.new(1950,3,1), type: 'Group::Local::ActiveMember', deleted_at: Time.new(1970, 3,1)}))
+Person.find(16).roles.first.update!(created_at: Time.new(1970,3,1))
+
+Qualification.create!({ person: Person.find(16), qualification_kind: QualificationKind.find(1), start_at: Time.new(1975,3,1)})
+Qualification.create!({ person: Person.find(16), qualification_kind: QualificationKind.find(2), start_at: Time.new(2010,3,1)})
 

@@ -7,21 +7,21 @@
 
 quali_kinds = QualificationKind.seed(:id,
  {id: 1,
-  validity: 2,
+  validity: 0,
   reactivateable: 2},
 
  {id: 2,
-  validity: 2},
+  validity: 0},
 )
 
 QualificationKind::Translation.seed(:qualification_kind_id, :locale,
   {qualification_kind_id: quali_kinds[0].id,
    locale: 'de',
-   label: 'Leitung'},
+   label: 'Eidgenössischer Veteran (35 Jahre)'},
 
   {qualification_kind_id: quali_kinds[1].id,
    locale: 'de',
-   label: 'Experte'},
+   label: 'Ehrenveteran (70 Jahre)'},
 )
 
 event_kinds = Event::Kind.seed(:id,
@@ -68,3 +68,4 @@ Event::KindQualificationKind.seed(:id,
    category: :prolongation,
    role: :participant},
 )
+

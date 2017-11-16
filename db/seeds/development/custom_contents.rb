@@ -19,24 +19,24 @@ CustomContent::Translation.seed(:custom_content_id, :locale,
    locale: 'de',
    label: 'Login Informationen',
    body: "<h2>Demo Version</h2>\
-<p>Du kannst dich mit den folgenden E-Mail-Adressen anmelden:</p>\
+<p>Sie können sich mit den folgenden E-Mail-Adressen anmelden:</p>\
 <ul>\
   <li>admin@sbv.ch (Passwort: demo) - Administrator mit vollem Zugriff</li>\
-  <li>leitung@sbv.ch (Passwort: demo) - Rolle Leitung einer lokalen Gruppe</li>\
-  <li> mitglied@sbv.ch (Passwort: demo) - Einfaches Gruppenmitglied</li>\
+  <li>leitung@sbv.ch (Passwort: demo) - Rolle Leitung einer lokalen Sektion</li>\
+  <li> mitglied@sbv.ch (Passwort: demo) - Einfaches Sektionsmitglied</li>\
 </ul\>
 <br/>\
 <p>\
-    Die Demo-Daten werden jeden Abend neu eingespielt. Falls du Probleme mit dem Login hast,\
-    wende dich an André Kunz (<a href='mailto:kunz@puzzle.ch'>kunz@puzzle.ch</a>).\
+    Die Demo-Daten werden jeden Abend neu eingespielt. Falls Sie Probleme mit dem Login haben,\
+    wenden Sie sich an Simon Huber (<a href='mailto:simon.huber@renuo.ch'>simon.huber@renuo.ch</a>).\
 </p>\
-<p>Bei Fragen wende dich an <a href='mailto:hitobito@puzzle.ch'>hitobito@puzzle.ch</a>.</p>" },
+<p>Bei Fragen wenden Sie sich an <a href='mailto:simon.huber@renuo.ch'>simon.huber@renuo.ch</a>.</p>" },
 
   {custom_content_id: login_form_id,
    locale: 'fr',
    label: 'Informations au login',
    body: "<h2>Version Démo</h2>\
-<p>Tu peux t'inscrire avec les adresses e-mail suivantes:</p>\
+<p>Vous pouvez vous inscrire avec les adresses e-mail suivantes:</p>\
 <ul>\
   <li>admin@sbv.ch (mot de passe: demo) - administrateur avec access complet</li>\
   <li>leitung@sbv.ch (mot de passe: demo) - rôle responsable d'une groupe locale</li>\
@@ -44,10 +44,10 @@ CustomContent::Translation.seed(:custom_content_id, :locale,
 </ul\>
 <br/>\
 <p>\
-  Les dates démo sont remis tous les soirs. Si tu as des problèmes avec l'inscription,
-  n'hésite pas à contacter André Kunz (<a href='mailto:kunz@puzzle.ch'>kunz@puzzle.ch</a>).\
+  Les dates démo sont remis tous les soirs. Si vous avez des problèmes avec l'inscription,
+  n'hésitez pas à contacter Simon Huber (<a href='mailto:simon.huber@renuo.ch'>simon.huber@renuo.ch</a>).\
 </p>\
-<p>En cas de questions tu peux écrire à <a href='mailto:hitobito@puzzle.ch'>hitobito@puzzle.ch</a>.</p>"},
+<p>En cas de questions vous pouvez écrire à <a href='mailto:simon.huber@renuo.ch'>simon.huber@renuo.ch</a>.</p>"},
 
   {custom_content_id: login_form_id,
    locale: 'en',
@@ -62,8 +62,8 @@ CustomContent::Translation.seed(:custom_content_id, :locale,
 <br/>\
 <p>\
   The demo data is reset every night. If you have problems with the login,
-  please contact André Kunz (<a href='mailto:kunz@puzzle.ch'>kunz@puzzle.ch</a>).\
+  please contact Simon Huber (<a href='mailto:simon.huber@renuo.ch'>simon.huber@renuo.ch</a>).\
 </p>\
-<p>In the case of other questions please write to <a href='mailto:hitobito@puzzle.ch'>hitobito@puzzle.ch</a>.</p>"}
+<p>In the case of other questions please write to <a href='mailto:simon.huber@renuo.ch'>simon.huber@renuo.ch</a>.</p>"}
 
 )

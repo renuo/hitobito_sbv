@@ -39,6 +39,12 @@
   }
 }
 
+#page.with-left-nav {
+  > .nav-left {
+    width: 220px + 2 * 18px;
+  }
+}
+
 #page-header {
   padding: 10px 20px 10px;
   border-bottom: 10px solid $blue;
